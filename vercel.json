@@ -1,16 +1,17 @@
 {
   "version": 2,
-  "routes": [
-    { 
-      "src": "/(.*)",
-      "dest": "/index.html",
-      "headers": {
-        "cache-control": "public, max-age=31536000, immutable"
-      }
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     },
-    { 
-      "src": "/(.*)",
-      "dest": "/index.html" 
+    {
+      "source": "/css/(.*)", 
+      "destination": "/css/$1"
+    },
+    {
+      "source": "/js/(.*)", 
+      "destination": "/js/$1"
     }
   ],
   "cleanUrls": true,
