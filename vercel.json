@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "rewrites": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/index"
+      "src": "index.html",
+      "use": "@vercel/static"
     },
     {
-      "source": "/css/(.*)", 
-      "destination": "/css/$1"
+      "src": "/css/*",
+      "use": "@vercel/static"
     },
     {
-      "source": "/js/(.*)", 
-      "destination": "/js/$1"
+      "src": "/js/*",
+      "use": "@vercel/static"
     }
   ],
   "cleanUrls": true,
